@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider Example</title>
+    <style>
+        /* Optional styling for demonstration purposes */
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <input type="range" min="0" max="100" value="50" id="mySlider" onchange="updateSliderValue()">
+    <p id="sliderValue">50</p>
+
+    <script>
+        function updateSliderValue() {
+            var slider = document.getElementById("mySlider");
+            var output = document.getElementById("sliderValue");
+            output.innerHTML = slider.value;
+        }
+    </script>
+
+</body>
+</html>
